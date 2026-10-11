@@ -26,7 +26,10 @@ if (
 }
 
 // Allow the React app to call this server
-app.use(cors({ origin: CLIENT_URL }));
+// CLIENT_URL can hold several addresses separated by commas,
+// for example: http://localhost:5173,https://your-app.vercel.app
+const allowedOrigins = CLIENT_URL.split(",").map((url) => url.trim().replace(/\/+$/, ""));
+app.use(cors({ origin: allowedOrigins }));
 
 // Allow the server to read JSON request bodies
 app.use(express.json());

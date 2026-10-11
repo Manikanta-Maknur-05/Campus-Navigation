@@ -6,7 +6,7 @@ const API_BASE_URL =
 
 const api = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 5000,
+  timeout: 60000,
 });
 
 // Before every request, attach the login token (if the user has one)
