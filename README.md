@@ -134,7 +134,7 @@ Create `.env` configuration files for both server and client:
 PORT=5000
 CLIENT_URL=http://localhost:5173
 MONGODB_URI=your_mongodb_connection_string_here
-JWT_SECRET=your_long_random_jwt_secret_key
+JWT_SECRET=your_long_random_jwt_secret_key-for-security
 JWT_EXPIRES_IN=7d
 ```
 
